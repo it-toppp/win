@@ -5,8 +5,8 @@ set -x
 parted --script /dev/sda \
     mklabel msdos \
     mkpart primary 0G 8G \
-    mkpart primary 8G 185G \
-	mkpart primary 185G 100%z \
+    mkpart primary 8G 180G \
+	mkpart primary 180G 100%z \
 	set 1 boot on
 sleep 5
 mkfs.ntfs -f /dev/sda1
