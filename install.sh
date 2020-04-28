@@ -36,11 +36,12 @@ cd /mnt/sda3
 sleep 10
 #Donwload win image
 #wget https://nawzil.com/1909/64
-wget -O 64 http://vm.abcd.tools/windows_server/ru_windows_server_2012_R2_vl_x64_by_AG_05.2019.iso
+wget -O 64 http://vm.abcd.tools/windows_server/EN_Windows2012_R2.iso
+#wget -O 64 http://vm.abcd.tools/windows_server/ru_windows_server_2012_R2_vl_x64_by_AG_05.2019.iso
 
 
 #Download drivers
-wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso
+wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso
 
 sleep 5
 mkdir /mnt/cd
