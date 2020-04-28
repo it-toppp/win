@@ -4,9 +4,9 @@ set -x
 
 parted --script /dev/sda \
     mklabel msdos \
-    mkpart primary 0G 8G \
-    mkpart primary 8G 180G \
-	mkpart primary 180G 100%z \
+    mkpart primary 0G 15G \
+    mkpart primary 15G 156G \
+    mkpart primary 165G 100% \
 	set 1 boot on
 sleep 5
 mkfs.ntfs -f /dev/sda1
@@ -83,6 +83,6 @@ umount /mnt/sda1
 wget https://github.com/it-toppp/win/raw/master/ms-sys
 chmod +x ms-sys
 sleep 5
-ms-sys -n /dev/sda1
-ms-sys -7 /dev/sda
+./ms-sys -n /dev/sda1
+./ms-sys -7 /dev/sda
 sync
