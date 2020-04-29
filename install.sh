@@ -4,9 +4,9 @@ set -x
 
 parted --script /dev/sda \
     mklabel msdos \
-    mkpart primary 0G 15G \
-    mkpart primary 15G 156G \
-    mkpart primary 165G 100% \
+    mkpart primary 0G 20G \
+    mkpart primary 20G 156G \
+    mkpart primary 170G 100% \
 	set 1 boot on
 sleep 5
 mkfs.ntfs -f /dev/sda1
@@ -36,10 +36,8 @@ cd /mnt/sda3
 sleep 10
 #Donwload win image
 #wget https://nawzil.com/1909/64
-wget -O 64 http://vm.abcd.tools/windows_server/RU_Windows2012.iso
-#wget -O 64 http://vm.abcd.tools/windows_server/ru_windows_server_2012_R2_vl_x64_by_AG_05.2019.iso
-
-
+#wget -O 64 http://vm.abcd.tools/windows_server/RU_Windows2012.iso
+wget -O 64 http://vm.abcd.tools/windows_server/RU_Windows2019.iso
 #Download drivers
 wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso
 
